@@ -6,6 +6,12 @@ public class Game {
     public void add(int pins) {
         itsThrows[itsCurrentThrow++] = pins;
         itsScore += pins;
+        if (firstThrow == true) {
+            firstThrow = false;
+            itsCurrentFrame++;
+        } else {
+            firstThrow = true;
+        }
     }
 
     public int scoreForFrame(int theFrame) {
@@ -26,8 +32,11 @@ public class Game {
     }
 
     public int getCurrentFrame() {
-        return 1 + (itsCurrentThrow - 1)/2;
+        return itsCurrentFrame;
     }
+
+    private int itsCurrentFrame = 0;
+    private boolean firstThrow = true;
     private int itsScore = 0;
     private int[] itsThrows = new int[21];
     private int itsCurrentThrow = 0;
