@@ -1,0 +1,3 @@
+rootProject.name = 'clean-software'
+include 'chapter5'
+
