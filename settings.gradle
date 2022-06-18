@@ -1,3 +1,4 @@
 rootProject.name = 'clean-software'
 include 'chapter5'
+include 'chapter6'
 
