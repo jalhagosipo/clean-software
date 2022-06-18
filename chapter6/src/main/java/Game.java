@@ -24,6 +24,10 @@ public class Game {
         }
         return score;
     }
+
+    public int getCurrentFrame() {
+        return 1 + (itsCurrentThrow - 1)/2;
+    }
     private int itsScore = 0;
     private int[] itsThrows = new int[21];
     private int itsCurrentThrow = 0;
