@@ -1,19 +1,25 @@
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class TestGame {
 
+    private Game g;
+
+    @BeforeEach
+    public void setUp() {
+        g = new Game();
+    }
+
     @Test
     public void testOneThrow() {
-        Game g = new Game();
         g.add(5);
         assertEquals(5, g.score());
     }
 
     @Test
     public void testTwoThrowsNoMark() {
-        Game g = new Game();
         g.add(5);
         g.add(4);
         assertEquals(9, g.score());
@@ -21,7 +27,6 @@ public class TestGame {
 
     @Test
     public void testFourThrowsNoMark() {
-        Game g = new Game();
         g.add(5);
         g.add(4);
         g.add(7);
