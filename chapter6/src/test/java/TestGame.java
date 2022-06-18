@@ -51,6 +51,6 @@ public class TestGame {
         g.add(3);
         g.add(2);
         assertEquals(13, g.scoreForFrame(1));
-        assertEquals(18, g.score());
+        assertEquals(18, g.scoreForFrame(2));
     }
 }
