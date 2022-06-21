@@ -1,7 +1,9 @@
-class DoubleBubbleSorter: BubbleSorter() {
-    private var array: DoubleArray? = null
+package template_method
 
-    fun sort(theArray: DoubleArray): Int {
+class IntBubbleSorter: BubbleSorter() {
+    private var array: IntArray? = null
+
+    fun sort(theArray: IntArray): Int {
         array = theArray
         length = array!!.size
         return doSort()

@@ -1,3 +1,5 @@
+package template_method
+
 import java.io.BufferedReader
 import java.io.InputStreamReader
 
