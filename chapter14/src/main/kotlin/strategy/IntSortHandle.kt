@@ -2,7 +2,7 @@ package strategy
 
 class IntSortHandle: SortHandle {
     private lateinit var array: IntArray
-
+    constructor()
     override fun swap(index: Int) {
         val temp = array[index]
         array[index] = array[index + 1]

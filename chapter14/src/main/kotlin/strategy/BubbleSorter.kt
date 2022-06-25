@@ -25,3 +25,10 @@ class BubbleSorter(
         return operations
     }
 }
+
+fun main() {
+    var arry = intArrayOf(1,3,2)
+    println("before : ${arry.joinToString()}")
+    BubbleSorter(IntSortHandle()).sort(arry)
+    println("after : ${arry.joinToString()}")
+}

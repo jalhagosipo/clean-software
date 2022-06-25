@@ -1,10 +1,8 @@
 package template_method
 
 abstract class BubbleSorter {
-    companion object {
-        private var operations = 0
-        var length = 0 // protected로 하면 IntBubbleSorter에서 안됨
-    }
+    private var operations = 0
+    protected var length = 0
 
 
     protected fun doSort(): Int {
