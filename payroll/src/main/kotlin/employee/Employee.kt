@@ -43,7 +43,7 @@ class Employee(
         this.ps = ps
     }
 
-    fun setMethod(ps: PaymentMethod) {
+    fun setMethod(pm: PaymentMethod) {
         this.pm = pm
     }
 
