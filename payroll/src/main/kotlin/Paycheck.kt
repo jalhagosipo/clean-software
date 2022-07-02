@@ -5,9 +5,9 @@ class Paycheck(
         private val payPeriodStartDate: Date,
         private val payPeriodEndDate: Date
 ) {
-    private var grossPay: Double = 0.0
-    private var deductions: Double = 0.0
-    private var netPay: Double = 0.0
+    var grossPay: Double = 0.0
+    var deductions: Double = 0.0
+    var netPay: Double = 0.0
     private val fields: MutableMap<String, String> = HashMap()
 
     fun getField(key: String): String? {

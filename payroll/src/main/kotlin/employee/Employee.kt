@@ -82,7 +82,10 @@ class Employee(
     fun payday(payDate: Date): Paycheck {
         val paycheck = Paycheck(getPayPeriodStartDate(payDate), payDate)
         val grossPay: Double = pc.calculatePay(paycheck) // 총 임금
-        val deductions: Double = affiliation!!.calculateDeductions(paycheck) // 공제
+        val deductions: Double = when (affiliation) {
+            null -> 0.0
+            else -> affiliation!!.calculateDeductions(paycheck)
+        }  // 공제
         paycheck.details(grossPay, deductions)
         pm.pay(paycheck)
         return paycheck

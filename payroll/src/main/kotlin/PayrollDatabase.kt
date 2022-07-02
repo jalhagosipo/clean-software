@@ -24,4 +24,8 @@ object PayrollDatabase {
     fun addUnionMember(memberId: Int, e: Employee?) {
         itsUnionMembers[memberId] = e?.empId!!
     }
+
+    fun getAllEmployee(): List<Employee> {
+        return itsEmployees.toList().filter{ it.second != null}.map { it.second!! }
+    }
 }
