@@ -10,7 +10,7 @@ import org.junit.jupiter.api.Test
 import schedule.MonthlySchedule
 
 
-class ChangeSalariedTransactionTest {
+class TestChangeSalariedTransaction {
 
     @Test
     @Throws(Exception::class)

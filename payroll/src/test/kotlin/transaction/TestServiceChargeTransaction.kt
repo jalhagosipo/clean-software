@@ -9,7 +9,7 @@ import org.junit.jupiter.api.Assertions.assertNotNull
 import org.junit.jupiter.api.Test
 
 
-class ServiceChargeTransactionTest {
+class TestServiceChargeTransaction {
 
     @Test
     @Throws(Exception::class)
