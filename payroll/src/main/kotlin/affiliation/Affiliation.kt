@@ -3,6 +3,6 @@ package affiliation
 import Paycheck
 
 
-internal interface Affiliation {
+interface Affiliation {
     fun calculateDeductions(pc: Paycheck): Double
 }

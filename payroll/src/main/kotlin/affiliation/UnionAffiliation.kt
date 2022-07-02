@@ -7,7 +7,7 @@ import java.util.*
 
 
 class UnionAffiliation(
-        private val dues: Double
+        val dues: Double
 ) : AbstractAffiliation() {
 
     private val serviceCharges: MutableList<ServiceCharge> = ArrayList()

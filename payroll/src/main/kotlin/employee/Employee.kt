@@ -1,12 +1,13 @@
 package employee
 
-import method.PaymentMethod
-import schedule.PaymentSchedule
-import classification.PaymentClassification
 import Paycheck
 import affiliation.AbstractAffiliation
 import affiliation.Affiliation
+import classification.PaymentClassification
+import method.PaymentMethod
+import schedule.PaymentSchedule
 import java.util.*
+
 
 class Employee(
         private var empId: Int,
@@ -17,7 +18,7 @@ class Employee(
         private var pm: PaymentMethod
 ) {
 
-    private lateinit var affiliation: AbstractAffiliation
+    private var affiliation: AbstractAffiliation? = null
 
     fun setName(name: String) {
         this.name = name
@@ -60,13 +61,18 @@ class Employee(
     }
 
     fun <T : Affiliation> getAffiliation(tClass: Class<T>): T {
-        val result: Affiliation = affiliation
+        val result: Affiliation? = affiliation
         check(!(result === AbstractAffiliation.NONE)) { "affiliation is none" }
         return tClass.cast(result)
     }
 
-    fun setAffiliation(af: AbstractAffiliation) {
+    fun setAffiliation(af: AbstractAffiliation?) {
         this.affiliation = af
+    }
+
+    fun getAffiliation(): Affiliation? {
+        return Optional.ofNullable(affiliation)
+                .orElse(AbstractAffiliation.NONE)
     }
 
     fun isPayDate(payDate: Date): Boolean {
@@ -76,7 +82,7 @@ class Employee(
     fun payday(payDate: Date): Paycheck {
         val paycheck = Paycheck(getPayPeriodStartDate(payDate), payDate)
         val grossPay: Double = pc.calculatePay(paycheck) // 총 임금
-        val deductions: Double = affiliation.calculateDeductions(paycheck) // 공제
+        val deductions: Double = affiliation!!.calculateDeductions(paycheck) // 공제
         paycheck.details(grossPay, deductions)
         pm.pay(paycheck)
         return paycheck
