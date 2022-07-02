@@ -10,7 +10,7 @@ import java.util.*
 
 
 class Employee(
-        private var empId: Int,
+        var empId: Int,
         private var name: String,
         private var address: String,
         private var pc: PaymentClassification,

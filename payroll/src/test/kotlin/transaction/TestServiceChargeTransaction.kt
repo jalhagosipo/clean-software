@@ -11,6 +11,9 @@ import org.junit.jupiter.api.Test
 
 class TestServiceChargeTransaction {
 
+    companion object {
+        const val MEMBER_ID = 0
+    }
     @Test
     @Throws(Exception::class)
     fun testServiceChangeTransaction() {
@@ -32,7 +35,7 @@ class TestServiceChargeTransaction {
         val t = AddHourlyEmployee(empId, "Bill", "Home", 15.25)
         t.execute()
         val e: Employee = PayrollDatabase.getEmployee(empId)!!
-        val af = UnionAffiliation(12.5)
+        val af = UnionAffiliation(MEMBER_ID, 12.5)
         e.setAffiliation(af)
         return af
     }

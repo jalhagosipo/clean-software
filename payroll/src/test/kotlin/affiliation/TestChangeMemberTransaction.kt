@@ -10,6 +10,10 @@ import org.junit.jupiter.api.Test
 
 
 class TestChangeMemberTransaction {
+    companion object {
+        const val MEMBER_ID = 0
+    }
+
     @Test
     @Throws(Exception::class)
     fun testChangeAffiliatedTransaction() {
@@ -19,7 +23,7 @@ class TestChangeMemberTransaction {
         t.execute()
         // when
         val dues = 99.42
-        val cat = ChangeMemberTransaction(empId, dues)
+        val cat = ChangeMemberTransaction(empId, MEMBER_ID, dues)
         cat.execute()
         // then
         val e: Employee? = PayrollDatabase.getEmployee(empId)

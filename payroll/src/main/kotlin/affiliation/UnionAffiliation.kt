@@ -7,6 +7,7 @@ import java.util.*
 
 
 class UnionAffiliation(
+        val memberId: Int,
         val dues: Double
 ) : AbstractAffiliation() {
 

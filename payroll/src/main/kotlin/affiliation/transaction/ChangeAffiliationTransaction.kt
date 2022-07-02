@@ -15,4 +15,5 @@ abstract class ChangeAffiliationTransaction(
     }
 
     abstract val affiliation: AbstractAffiliation?
+    abstract fun recordMembership(e: Employee?)
 }
