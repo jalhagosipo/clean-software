@@ -1,11 +1,10 @@
-package transaction
+package employee
 
 import PayrollDatabase
-import employee.AddHourlyEmployee
-import employee.Employee
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Assertions.assertNotNull
 import org.junit.jupiter.api.Test
+import employee.trasaction.ChangeAddressTransaction
 
 
 class TestChangeAddressTransaction {

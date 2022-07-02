@@ -4,7 +4,7 @@ import PayrollDatabase
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Assertions.assertNotNull
 import org.junit.jupiter.api.Test
-import transaction.ChangeNameTransaction
+import employee.trasaction.ChangeNameTransaction
 
 class TestChangeNameTransaction {
 

@@ -1,6 +1,6 @@
 package employee
 
-import transaction.AddEmployeeTransaction
+import employee.trasaction.AddEmployeeTransaction
 import schedule.PaymentSchedule
 import classification.PaymentClassification
 import classification.SalariedClassification

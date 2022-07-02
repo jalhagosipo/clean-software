@@ -1,4 +1,4 @@
-package transaction
+package employee.trasaction
 
 import method.PaymentMethod
 import schedule.PaymentSchedule
@@ -6,6 +6,7 @@ import PayrollDatabase
 import classification.PaymentClassification
 import employee.Employee
 import method.HoldMethod
+import transaction.Transaction
 
 abstract class AddEmployeeTransaction internal constructor(
         private val empId: Int,

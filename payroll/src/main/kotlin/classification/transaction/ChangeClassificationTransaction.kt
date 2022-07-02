@@ -4,7 +4,7 @@ import classification.PaymentClassification
 import employee.Employee
 import schedule.PaymentSchedule
 
-import transaction.ChangeEmployeeTransaction
+import employee.trasaction.ChangeEmployeeTransaction
 
 
 abstract class ChangeClassificationTransaction(

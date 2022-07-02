@@ -1,13 +1,13 @@
-package transaction
+package employee.trasaction
 
 import employee.Employee
 
 
-class ChangeNameTransaction(
+class ChangeAddressTransaction(
         empId: Int,
-        private val name: String
+        private val address: String
 ) : ChangeEmployeeTransaction(empId) {
     override fun change(e: Employee?) {
-        e!!.setName(name)
+        e!!.setAddress(address)
     }
 }

@@ -3,7 +3,7 @@ package employee
 import PayrollDatabase
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
-import transaction.DeleteEmployeeTransaction
+import employee.trasaction.DeleteEmployeeTransaction
 
 class TestDeleteEmployee {
 
