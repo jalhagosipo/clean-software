@@ -4,7 +4,7 @@ import employee.trasaction.AddEmployeeTransaction
 import schedule.PaymentSchedule
 import classification.CommissionedClassification
 import classification.PaymentClassification
-import schedule.BiWeaklySchedule
+import schedule.BiweeklySchedule
 
 class AddCommissionedEmployee(
         empId: Int,
@@ -17,5 +17,5 @@ class AddCommissionedEmployee(
     override val classification: PaymentClassification
         get() = CommissionedClassification(salary + 0.0, commissionRate)
     override val schedule: PaymentSchedule
-        get() = BiWeaklySchedule()
+        get() = BiweeklySchedule()
 }

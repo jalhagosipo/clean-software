@@ -4,7 +4,7 @@ import DateUtils
 import java.util.*
 
 
-class BiWeaklySchedule : PaymentSchedule {
+class BiweeklySchedule : PaymentSchedule {
     override fun isPayDate(payDate: Date): Boolean {
         return false
     }

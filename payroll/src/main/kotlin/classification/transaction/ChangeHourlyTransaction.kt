@@ -4,7 +4,7 @@ import classification.HourlyClassification
 import classification.PaymentClassification
 import schedule.PaymentSchedule
 
-import schedule.WeaklySchedule
+import schedule.WeeklySchedule
 
 
 class ChangeHourlyTransaction(
@@ -13,7 +13,7 @@ class ChangeHourlyTransaction(
 ) : ChangeClassificationTransaction(empId) {
 
     override val schedule: PaymentSchedule
-        get() = WeaklySchedule()
+        get() = WeeklySchedule()
     override val classification: PaymentClassification
         get() = HourlyClassification(hourlyRate)
 }

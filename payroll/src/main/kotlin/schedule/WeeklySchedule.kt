@@ -4,7 +4,7 @@ import DateUtils
 import java.util.*
 
 
-class WeaklySchedule : PaymentSchedule {
+class WeeklySchedule : PaymentSchedule {
     override fun isPayDate(payDate: Date): Boolean {
         return isFriday(payDate)
     }

@@ -7,7 +7,7 @@ import employee.Employee
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Assertions.assertNotNull
 import org.junit.jupiter.api.Test
-import schedule.WeaklySchedule
+import schedule.WeeklySchedule
 
 
 class TestChangeHourlyTransaction {
@@ -33,7 +33,7 @@ class TestChangeHourlyTransaction {
         val hc = e?.getClassification(HourlyClassification::class.java)
         assertNotNull(hc)
         assertEquals(hc?.getRate(), rate)
-        val ws = e?.getSchedule(WeaklySchedule::class.java)
+        val ws = e?.getSchedule(WeeklySchedule::class.java)
         assertNotNull(ws)
     }
 }

@@ -2,7 +2,7 @@ package classification.transaction
 
 import classification.CommissionedClassification
 import classification.PaymentClassification
-import schedule.BiWeaklySchedule
+import schedule.BiweeklySchedule
 import schedule.PaymentSchedule
 
 
@@ -15,5 +15,5 @@ class ChangeCommissionedTransaction(
     override val classification: PaymentClassification
         get() = CommissionedClassification(salary, commissionRate)
     override val schedule: PaymentSchedule
-        get() = BiWeaklySchedule()
+        get() = BiweeklySchedule()
 }
