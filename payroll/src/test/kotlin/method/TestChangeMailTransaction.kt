@@ -29,7 +29,7 @@ class TestChangeMailTransaction {
 
     private fun assertEmployee(e: Employee?, address: String) {
         assertNotNull(e)
-        val dm = e?.pm as MailMethod
+        val dm = e?.pm as? MailMethod
         assertNotNull(dm)
         assertEquals(dm?.address, address)
     }

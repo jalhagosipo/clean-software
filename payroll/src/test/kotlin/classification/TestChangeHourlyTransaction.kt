@@ -30,10 +30,10 @@ class TestChangeHourlyTransaction {
 
     private fun assertEmployee(e: Employee?, rate: Double) {
         assertNotNull(e)
-        val hc = e?.pc as HourlyClassification
+        val hc = e?.pc as? HourlyClassification
         assertNotNull(hc)
         assertEquals(hc?.getRate(), rate)
-        val ws = e?.ps as WeeklySchedule
+        val ws = e?.ps as? WeeklySchedule
         assertNotNull(ws)
     }
 }

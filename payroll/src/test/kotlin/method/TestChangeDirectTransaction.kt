@@ -29,7 +29,7 @@ class TestChangeDirectTransaction {
 
     private fun assertEmployee(e: Employee?, bank: String, account: String) {
         assertNotNull(e)
-        val dm = e?.pm as DirectMethod
+        val dm = e?.pm as? DirectMethod
         assertNotNull(dm)
         assertEquals(dm?.bank, bank)
         assertEquals(dm?.account, account)

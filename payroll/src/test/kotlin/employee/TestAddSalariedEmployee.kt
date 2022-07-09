@@ -23,9 +23,9 @@ class TestAddSalariedEmployee {
         // then
         val e: Employee = PayrollDatabase.getEmployee(empId)!!
         assertEmployee(e, name, address)
-        assertClassification(e.pc as SalariedClassification, salary)
-        assertSchedule(e.ps as MonthlySchedule)
-        assertMethod(e.pm as HoldMethod)
+        assertClassification(e.pc as? SalariedClassification, salary)
+        assertSchedule(e.ps as? MonthlySchedule)
+        assertMethod(e.pm as? HoldMethod)
     }
 
     private fun assertEmployee(e: Employee, name: String, address: String) {
@@ -34,16 +34,16 @@ class TestAddSalariedEmployee {
         assertEquals(e.address, address)
     }
 
-    private fun assertClassification(c: SalariedClassification, salary: Double) {
+    private fun assertClassification(c: SalariedClassification?, salary: Double) {
         assertNotNull(c)
-        assertEquals(c.getSalary(), salary)
+        assertEquals(c?.getSalary(), salary)
     }
 
-    private fun assertSchedule(s: MonthlySchedule) {
+    private fun assertSchedule(s: MonthlySchedule?) {
         assertNotNull(s)
     }
 
-    private fun assertMethod(m: HoldMethod) {
+    private fun assertMethod(m: HoldMethod?) {
         assertNotNull(m)
     }
 }

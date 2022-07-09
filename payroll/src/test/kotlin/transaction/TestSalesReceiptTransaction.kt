@@ -27,12 +27,12 @@ class TestSalesReceiptTransaction {
         // then
         val e: Employee = PayrollDatabase.getEmployee(empId)!!
         assertNotNull(e)
-        assertCommissionedClassification(e.pc as CommissionedClassification, timeMillis, amount)
+        assertCommissionedClassification(e.pc as? CommissionedClassification, timeMillis, amount)
     }
 
-    private fun assertCommissionedClassification(cc: CommissionedClassification, timeMillis: Long, amount: Double) {
+    private fun assertCommissionedClassification(cc: CommissionedClassification?, timeMillis: Long, amount: Double) {
         assertNotNull(cc)
-        val sr: SalesReceipt? = cc.getSalesReceipt(Date(timeMillis))
+        val sr: SalesReceipt? = cc?.getSalesReceipt(Date(timeMillis))
         assertNotNull(sr)
         assertEquals(sr?.amount, amount)
     }

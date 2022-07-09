@@ -208,7 +208,7 @@ class TestPaydayTransaction {
         addServiceCharge(empId, payDate, charge) // 기간 내
         addServiceCharge(empId, getDate(2001, Calendar.NOVEMBER, 16), 200.00) // 다음 주 금요일
         val hours = 8.0
-        TimeCardTransaction(Date(payDate.getTime()), hours, empId).execute()
+        TimeCardTransaction(Date(payDate.time), hours, empId).execute()
         // when
         val pt = PaydayTransaction(payDate)
         pt.execute()
@@ -218,6 +218,6 @@ class TestPaydayTransaction {
     }
 
     private fun addServiceCharge(empId: Int, date: Date, charge: Double) {
-        ServiceChargeTransaction(empId, date.getTime(), charge).execute()
+        ServiceChargeTransaction(empId, date.time, charge).execute()
     }
 }
