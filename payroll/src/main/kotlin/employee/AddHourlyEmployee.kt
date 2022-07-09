@@ -10,11 +10,11 @@ class AddHourlyEmployee(
         empId: Int,
         name: String,
         address: String,
-        private val hourlyWage: Double
+        private val hourlyRate: Double
 ) : AddEmployeeTransaction(empId, name, address) {
 
     override val schedule: PaymentSchedule
         get() = WeeklySchedule()
     override val classification: PaymentClassification
-        get() = HourlyClassification(hourlyWage)
+        get() = HourlyClassification(hourlyRate)
 }

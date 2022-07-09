@@ -6,7 +6,7 @@ import method.HoldMethod
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Assertions.assertNotNull
 import org.junit.jupiter.api.Test
-import schedule.BiweeklySchedule
+import schedule.BiWeeklySchedule
 
 
 class TestAddCommissionedEmployee {
@@ -29,7 +29,7 @@ class TestAddCommissionedEmployee {
         val e: Employee = PayrollDatabase.getEmployee(empId)!!
         assertEmployee(e, name, address)
         assertClassification(e.pc as? CommissionedClassification, salary, commissionRate)
-        assertSchedule(e.ps as? BiweeklySchedule)
+        assertSchedule(e.ps as? BiWeeklySchedule)
         assertMethod(e.pm as? HoldMethod)
     }
 
@@ -45,7 +45,7 @@ class TestAddCommissionedEmployee {
         assertEquals(c?.getCommissionRate(), commissionRate)
     }
 
-    private fun assertSchedule(s: BiweeklySchedule?) {
+    private fun assertSchedule(s: BiWeeklySchedule?) {
         assertNotNull(s)
     }
 
