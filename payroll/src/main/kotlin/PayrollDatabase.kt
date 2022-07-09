@@ -2,8 +2,8 @@ import affiliation.UnionAffiliation
 import employee.Employee
 
 object PayrollDatabase {
-    private var itsEmployees: MutableMap<Int, Employee> = HashMap()
-    private var itsUnionMembers: MutableMap<Int, Int> = HashMap()
+    private val itsEmployees: MutableMap<Int, Employee> = HashMap()
+    private val itsUnionMembers: MutableMap<Int, Int> = HashMap()
 
     fun getEmployee(empId: Int): Employee? {
         return itsEmployees[empId]
