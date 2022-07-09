@@ -1,9 +1,9 @@
-package transaction
+package classification.transaction
 
 import PayrollDatabase
-import TimeCard
 import Transaction
 import classification.HourlyClassification
+import classification.TimeCard
 import employee.Employee
 import java.util.*
 

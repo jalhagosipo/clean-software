@@ -1,4 +1,4 @@
-package employee
+package employee.trasaction
 
 import employee.trasaction.AddEmployeeTransaction
 import schedule.PaymentSchedule

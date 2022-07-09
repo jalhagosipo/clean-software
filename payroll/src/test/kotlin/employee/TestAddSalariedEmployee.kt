@@ -2,6 +2,7 @@ package employee
 
 import PayrollDatabase
 import classification.SalariedClassification
+import employee.trasaction.AddSalariedEmployee
 import method.HoldMethod
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Assertions.assertNotNull

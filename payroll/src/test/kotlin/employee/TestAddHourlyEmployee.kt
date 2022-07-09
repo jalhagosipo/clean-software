@@ -2,6 +2,7 @@ package employee
 
 import PayrollDatabase
 import classification.HourlyClassification
+import employee.trasaction.AddHourlyEmployee
 import method.HoldMethod
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Assertions.assertNotNull

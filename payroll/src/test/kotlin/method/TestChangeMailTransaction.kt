@@ -1,7 +1,7 @@
 package method
 
 import PayrollDatabase
-import employee.AddSalariedEmployee
+import employee.trasaction.AddSalariedEmployee
 import employee.Employee
 import method.transaction.ChangeMailTransaction
 import org.junit.jupiter.api.Assertions.assertEquals

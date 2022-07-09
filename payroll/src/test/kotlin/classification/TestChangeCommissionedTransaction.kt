@@ -1,7 +1,7 @@
 package classification
 
 import PayrollDatabase
-import employee.AddCommissionedEmployee
+import employee.trasaction.AddCommissionedEmployee
 import employee.Employee
 import method.HoldMethod
 import org.junit.jupiter.api.Assertions.assertEquals

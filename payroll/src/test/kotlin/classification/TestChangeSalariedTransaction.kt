@@ -2,7 +2,7 @@ package classification
 
 import PayrollDatabase
 import classification.transaction.ChangeSalariedTransaction
-import employee.AddHourlyEmployee
+import employee.trasaction.AddHourlyEmployee
 import employee.Employee
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Assertions.assertNotNull

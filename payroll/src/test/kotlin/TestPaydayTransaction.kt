@@ -1,10 +1,10 @@
 import affiliation.transaction.ChangeMemberTransaction
-import employee.AddHourlyEmployee
-import employee.AddSalariedEmployee
+import employee.trasaction.AddHourlyEmployee
+import employee.trasaction.AddSalariedEmployee
 import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.Test
 import transaction.ServiceChargeTransaction
-import transaction.TimeCardTransaction
+import classification.transaction.TimeCardTransaction
 import java.util.*
 
 

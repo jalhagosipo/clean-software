@@ -2,7 +2,7 @@ package transaction
 
 import PayrollDatabase
 import affiliation.UnionAffiliation
-import employee.AddHourlyEmployee
+import employee.trasaction.AddHourlyEmployee
 import employee.Employee
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Assertions.assertNotNull

@@ -3,7 +3,7 @@ package transaction
 import PayrollDatabase
 import SalesReceipt
 import classification.CommissionedClassification
-import employee.AddCommissionedEmployee
+import employee.trasaction.AddCommissionedEmployee
 import employee.Employee
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Assertions.assertNotNull

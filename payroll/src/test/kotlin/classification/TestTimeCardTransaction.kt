@@ -1,9 +1,10 @@
-package transaction
+package classification
 
 import PayrollDatabase
-import TimeCard
+import classification.TimeCard
 import classification.HourlyClassification
-import employee.AddHourlyEmployee
+import classification.transaction.TimeCardTransaction
+import employee.trasaction.AddHourlyEmployee
 import employee.Employee
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Assertions.assertNotNull
@@ -33,6 +34,6 @@ class TestTimeCardTransaction {
         assertNotNull(hc)
         val tc: TimeCard? = hc?.getTimeCard(date)
         assertNotNull(tc)
-        assertEquals(tc?.getHours(), hours)
+        assertEquals(tc?.itsHours, hours)
     }
 }
