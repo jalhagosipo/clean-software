@@ -14,7 +14,7 @@ object PayrollDatabase {
     }
 
     fun deleteEmployee(empId: Int) {
-        itsEmployees?.put(empId, null)
+        itsEmployees?.remove(empId)
     }
 
     fun removeUnionMember(memberId: Int) {
