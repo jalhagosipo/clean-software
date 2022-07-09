@@ -1,7 +1,7 @@
 package employee.trasaction
 
 import PayrollDatabase
-import transaction.Transaction
+import Transaction
 
 class DeleteEmployeeTransaction(
         private val empId: Int

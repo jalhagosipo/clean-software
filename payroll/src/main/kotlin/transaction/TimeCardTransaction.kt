@@ -2,6 +2,7 @@ package transaction
 
 import PayrollDatabase
 import TimeCard
+import Transaction
 import classification.HourlyClassification
 import employee.Employee
 import java.util.*

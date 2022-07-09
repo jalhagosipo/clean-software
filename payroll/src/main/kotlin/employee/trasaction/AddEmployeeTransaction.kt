@@ -6,14 +6,13 @@ import PayrollDatabase
 import classification.PaymentClassification
 import employee.Employee
 import method.HoldMethod
-import transaction.Transaction
+import Transaction
 
-abstract class AddEmployeeTransaction internal constructor(
-        private val empId: Int,
-        private val name: String,
-        private val address: String,
-
-        ) : Transaction {
+abstract class AddEmployeeTransaction (
+    private val empId: Int,
+    private val name: String,
+    private val address: String,
+) : Transaction {
 
     override fun execute() {
         val pc: PaymentClassification = classification

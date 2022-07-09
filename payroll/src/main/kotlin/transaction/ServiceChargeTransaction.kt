@@ -2,6 +2,7 @@ package transaction
 
 import PayrollDatabase
 import ServiceCharge
+import Transaction
 import affiliation.UnionAffiliation
 import employee.Employee
 import java.util.*

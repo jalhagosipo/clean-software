@@ -2,6 +2,7 @@ package transaction
 
 import PayrollDatabase
 import SalesReceipt
+import Transaction
 import classification.CommissionedClassification
 import employee.Employee
 import java.util.*

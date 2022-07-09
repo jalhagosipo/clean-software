@@ -2,7 +2,7 @@ package employee.trasaction
 
 import PayrollDatabase
 import employee.Employee
-import transaction.Transaction
+import Transaction
 import java.util.*
 
 
