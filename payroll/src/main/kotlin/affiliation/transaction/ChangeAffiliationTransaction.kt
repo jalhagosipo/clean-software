@@ -11,7 +11,7 @@ abstract class ChangeAffiliationTransaction(
         empId: Int?
 ) : ChangeEmployeeTransaction(empId!!) {
     override fun change(e: Employee?) {
-        e!!.setAffiliation(affiliation)
+        e!!.affiliation = affiliation
     }
 
     abstract val affiliation: AbstractAffiliation?

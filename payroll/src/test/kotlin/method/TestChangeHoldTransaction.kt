@@ -26,7 +26,7 @@ class TestChangeHoldTransaction {
 
     private fun assertEmployee(e: Employee?) {
         assertNotNull(e)
-        val hm = e?.getMethod(HoldMethod::class.java)
+        val hm = e?.pm as HoldMethod
         assertNotNull(hm)
     }
 }

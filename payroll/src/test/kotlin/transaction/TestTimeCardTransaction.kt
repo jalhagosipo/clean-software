@@ -26,7 +26,7 @@ class TestTimeCardTransaction {
         // then
         val e: Employee? = PayrollDatabase.getEmployee(empId)
         assertNotNull(e)
-        assertHourlyClassification(e!!.getClassification(HourlyClassification::class.java), date, hours)
+        assertHourlyClassification(e!!.pc as HourlyClassification, date, hours)
     }
 
     private fun assertHourlyClassification(hc: HourlyClassification, date: Date, hours: Double) {

@@ -8,6 +8,6 @@ class ChangeNameTransaction(
         private val name: String
 ) : ChangeEmployeeTransaction(empId) {
     override fun change(e: Employee?) {
-        e!!.setName(name)
+        e!!.name = name
     }
 }

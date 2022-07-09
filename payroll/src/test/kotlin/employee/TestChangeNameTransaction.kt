@@ -22,6 +22,6 @@ class TestChangeNameTransaction {
         // then
         val modified: Employee? = PayrollDatabase.getEmployee(empId)
         assertNotNull(modified)
-        assertEquals(modified?.getName(), newName)
+        assertEquals(modified?.name, newName)
     }
 }

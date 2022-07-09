@@ -10,7 +10,7 @@ abstract class ChangeMethodTransaction(
         empId: Int?
 ) : ChangeEmployeeTransaction(empId!!) {
     override fun change(e: Employee?) {
-        e!!.setMethod(method)
+        e!!.pm = method
     }
 
     abstract val method: PaymentMethod

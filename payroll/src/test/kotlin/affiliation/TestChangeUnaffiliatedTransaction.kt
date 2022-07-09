@@ -27,6 +27,6 @@ class TestChangeUnaffiliatedTransaction {
 
     private fun assertEmployee(e: Employee?) {
         assertNotNull(e)
-        assertEquals(e?.getAffiliation(), AbstractAffiliation.NONE)
+        assertEquals(e?.affiliation, AbstractAffiliation.NONE)
     }
 }

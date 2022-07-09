@@ -13,8 +13,8 @@ abstract class ChangeClassificationTransaction(
     : ChangeEmployeeTransaction(empId!!) {
 
     override fun change(e: Employee?) {
-        e!!.setClassification(classification)
-        e.setSchedule(schedule)
+        e!!.pc = classification
+        e.ps = schedule
     }
 
     abstract val schedule: PaymentSchedule

@@ -16,7 +16,7 @@ class SalesReceiptTransaction(
     override fun execute() {
         val e: Employee = PayrollDatabase.getEmployee(empId) ?: throw Exception("No such employee.")
         try {
-            val cc: CommissionedClassification = e.getClassification(CommissionedClassification::class.java)
+            val cc: CommissionedClassification = e.pc as CommissionedClassification
             cc.addReceipt(SalesReceipt(saleDate, amount))
         } catch (e: Exception) {
             throw Exception("Tried to add sales receipt to non-commissioned employee")

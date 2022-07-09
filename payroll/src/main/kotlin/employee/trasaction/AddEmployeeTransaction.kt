@@ -19,9 +19,9 @@ abstract class AddEmployeeTransaction (
         val ps: PaymentSchedule = schedule
         val pm: PaymentMethod = HoldMethod()
         val e = Employee(empId, name, address, pc, ps, pm)
-        e.setClassification(pc)
-        e.setSchedule(ps)
-        e.setMethod(pm)
+        e.pc = pc
+        e.ps = ps
+        e.pm = pm
         PayrollDatabase.addEmployee(empId, e)
     }
 

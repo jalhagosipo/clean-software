@@ -25,15 +25,15 @@ class TestAddHourlyEmployee {
         // then
         val e: Employee = PayrollDatabase.getEmployee(empId)!!
         assertEmployee(e, name, address)
-        assertClassification(e.getClassification(HourlyClassification::class.java), hourlyWage)
-        assertSchedule(e.getSchedule(WeeklySchedule::class.java))
-        assertMethod(e.getMethod(HoldMethod::class.java))
+        assertClassification(e.pc as HourlyClassification, hourlyWage)
+        assertSchedule(e.ps as WeeklySchedule)
+        assertMethod(e.pm as HoldMethod)
     }
 
     private fun assertEmployee(e: Employee, name: String, address: String) {
         assertNotNull(e)
-        assertEquals(e.getName(), name)
-        assertEquals(e.getAddress(), address)
+        assertEquals(e.name, name)
+        assertEquals(e.address, address)
     }
 
     private fun assertClassification(c: HourlyClassification, hourlyWage: Double) {

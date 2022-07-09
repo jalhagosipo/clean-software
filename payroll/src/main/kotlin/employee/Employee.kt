@@ -9,70 +9,22 @@ import schedule.PaymentSchedule
 import java.util.*
 
 
-class Employee(
+data class Employee(
         var empId: Int,
-        private var name: String,
-        private var address: String,
-        private var pc: PaymentClassification,
-        private var ps: PaymentSchedule,
-        private var pm: PaymentMethod
+        var name: String,
+        var address: String,
+        var pc: PaymentClassification,
+        var ps: PaymentSchedule,
+        var pm: PaymentMethod
 ) {
 
-    private var affiliation: AbstractAffiliation? = null
-
-    fun setName(name: String) {
-        this.name = name
-    }
-
-    fun setAddress(address: String) {
-        this.address = address
-    }
-
-    fun getName(): String {
-        return this.name
-    }
-
-    fun getAddress(): String {
-        return this.address
-    }
-
-    fun setClassification(pc: PaymentClassification) {
-        this.pc = pc
-    }
-
-    fun setSchedule(ps: PaymentSchedule) {
-        this.ps = ps
-    }
-
-    fun setMethod(pm: PaymentMethod) {
-        this.pm = pm
-    }
-
-    fun <T : PaymentClassification?> getClassification(tClass: Class<T>): T {
-        return tClass.cast(pc)
-    }
-
-    fun <T : PaymentSchedule?> getSchedule(tClass: Class<T>): T {
-        return tClass.cast(ps)
-    }
-
-    fun <T : PaymentMethod?> getMethod(tClass: Class<T>): T {
-        return tClass.cast(pm)
-    }
+    var affiliation: AbstractAffiliation? = null
+        get() = field ?: AbstractAffiliation.NONE
 
     fun <T : Affiliation> getAffiliation(tClass: Class<T>): T {
         val result: Affiliation? = affiliation
         check(!(result === AbstractAffiliation.NONE)) { "affiliation is none" }
         return tClass.cast(result)
-    }
-
-    fun setAffiliation(af: AbstractAffiliation?) {
-        this.affiliation = af
-    }
-
-    fun getAffiliation(): Affiliation? {
-        return Optional.ofNullable(affiliation)
-                .orElse(AbstractAffiliation.NONE)
     }
 
     fun isPayDate(payDate: Date): Boolean {

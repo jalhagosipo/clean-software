@@ -23,6 +23,6 @@ class TestChangeAddressTransaction {
         // then
         val modified: Employee? = PayrollDatabase.getEmployee(empId)
         assertNotNull(modified)
-        assertEquals(modified?.getAddress(), newAddress)
+        assertEquals(modified?.address, newAddress)
     }
 }

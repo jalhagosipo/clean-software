@@ -36,7 +36,7 @@ class TestServiceChargeTransaction {
         t.execute()
         val e: Employee = PayrollDatabase.getEmployee(empId)!!
         val af = UnionAffiliation(MEMBER_ID, 12.5)
-        e.setAffiliation(af)
+        e.affiliation = af
         return af
     }
 }
