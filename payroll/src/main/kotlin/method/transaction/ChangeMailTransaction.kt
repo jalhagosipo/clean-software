@@ -5,7 +5,7 @@ import method.PaymentMethod
 
 
 class ChangeMailTransaction(
-        empId: Int?,
+        empId: Int,
         private val address: String
 ) : ChangeMethodTransaction(empId) {
 

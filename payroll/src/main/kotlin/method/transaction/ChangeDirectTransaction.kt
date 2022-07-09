@@ -5,7 +5,7 @@ import method.PaymentMethod
 
 
 class ChangeDirectTransaction(
-        empId: Int?,
+        empId: Int,
         private val bank: String,
         private val account: String
 ) : ChangeMethodTransaction(empId) {

@@ -14,7 +14,7 @@ class UnionAffiliation(
 
     fun getServiceCharge(timeMillis: Long): ServiceCharge {
         return serviceCharges.stream()
-                .filter { it.timeMillis != null && it.timeMillis!! == timeMillis }
+                .filter { it.timeMillis != null && it.timeMillis == timeMillis }
                 .findAny()
                 .orElse(null)
     }
@@ -30,7 +30,7 @@ class UnionAffiliation(
 
     private fun getTotalServiceCharge(payPeriodStartDate: Date?, payPeriodEndDate: Date?): Double {
         return serviceCharges.stream()
-                .filter { DateUtils.between(Date(it.timeMillis!!), payPeriodStartDate, payPeriodEndDate) }
+                .filter { DateUtils.between(Date(it.timeMillis), payPeriodStartDate, payPeriodEndDate) }
                 .mapToDouble(ServiceCharge::amount)
                 .sum()
     }

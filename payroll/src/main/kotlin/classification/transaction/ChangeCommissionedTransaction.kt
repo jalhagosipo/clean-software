@@ -7,7 +7,7 @@ import schedule.PaymentSchedule
 
 
 class ChangeCommissionedTransaction(
-        empId: Int?,
+        empId: Int,
         private val salary: Double,
         private val commissionRate: Double
 ) : ChangeClassificationTransaction(empId) {

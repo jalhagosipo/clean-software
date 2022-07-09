@@ -32,8 +32,10 @@ class TestChangeMemberTransaction {
 
     private fun assertEmployee(e: Employee?, dues: Double) {
         assertNotNull(e)
-        val ua = e?.getAffiliation(UnionAffiliation::class.java)
+        val ua = e?.affiliation
         assertNotNull(ua)
-        assertEquals(ua?.dues, dues)
+        if (ua is UnionAffiliation) {
+            assertEquals(ua?.dues, dues)
+        }
     }
 }

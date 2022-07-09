@@ -7,12 +7,12 @@ import employee.Employee
 
 
 class ChangeMemberTransaction(
-        empId: Int?,
+        empId: Int,
         var memberId: Int,
         private val dues: Double
 ) : ChangeAffiliationTransaction(empId) {
 
-    override val affiliation: AbstractAffiliation?
+    override val affiliation: AbstractAffiliation
         get() = UnionAffiliation(memberId, dues)
 
     override fun recordMembership(e: Employee?) {

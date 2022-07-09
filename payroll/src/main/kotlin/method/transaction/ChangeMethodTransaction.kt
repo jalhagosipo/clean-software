@@ -7,8 +7,8 @@ import method.PaymentMethod
 
 
 abstract class ChangeMethodTransaction(
-        empId: Int?
-) : ChangeEmployeeTransaction(empId!!) {
+        empId: Int
+) : ChangeEmployeeTransaction(empId) {
     override fun change(e: Employee?) {
         e!!.pm = method
     }

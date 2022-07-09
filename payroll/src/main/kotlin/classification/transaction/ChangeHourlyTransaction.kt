@@ -8,7 +8,7 @@ import schedule.WeeklySchedule
 
 
 class ChangeHourlyTransaction(
-        empId: Int?,
+        empId: Int,
         private val hourlyRate: Double
 ) : ChangeClassificationTransaction(empId) {
 

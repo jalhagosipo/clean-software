@@ -8,9 +8,8 @@ import employee.trasaction.ChangeEmployeeTransaction
 
 
 abstract class ChangeClassificationTransaction(
-        empId: Int?
-)
-    : ChangeEmployeeTransaction(empId!!) {
+        empId: Int
+) : ChangeEmployeeTransaction(empId) {
 
     override fun change(e: Employee?) {
         e!!.pc = classification

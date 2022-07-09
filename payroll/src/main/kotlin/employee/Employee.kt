@@ -21,12 +21,6 @@ data class Employee(
     var affiliation: AbstractAffiliation? = null
         get() = field ?: AbstractAffiliation.NONE
 
-    fun <T : Affiliation> getAffiliation(tClass: Class<T>): T {
-        val result: Affiliation? = affiliation
-        check(!(result === AbstractAffiliation.NONE)) { "affiliation is none" }
-        return tClass.cast(result)
-    }
-
     fun isPayDate(payDate: Date): Boolean {
         return ps.isPayDate(payDate)
     }

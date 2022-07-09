@@ -17,7 +17,9 @@ class ServiceChargeTransaction(
     override fun execute() {
         val e: Employee = Optional.ofNullable(PayrollDatabase.getEmployee(empId))
                 .orElseThrow { IllegalArgumentException("Not found employee : $empId") }
-        val uf = e.getAffiliation(UnionAffiliation::class.java)
-        uf.addServiceCharge(ServiceCharge(timeMillis, charge))
+        val uf = e.affiliation!!
+        if (uf is UnionAffiliation) {
+            uf.addServiceCharge(ServiceCharge(timeMillis, charge))
+        }
     }
 }

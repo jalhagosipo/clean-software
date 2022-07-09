@@ -5,7 +5,7 @@ import method.PaymentMethod
 
 
 class ChangeHoldTransaction constructor(
-        empId: Int?
+        empId: Int
 ) : ChangeMethodTransaction(empId) {
     override val method: PaymentMethod
         get() = HoldMethod()

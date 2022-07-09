@@ -7,7 +7,7 @@ import schedule.PaymentSchedule
 
 
 class ChangeSalariedTransaction(
-        empId: Int?,
+        empId: Int,
         private val salary: Double
 ) : ChangeClassificationTransaction(empId) {
 
