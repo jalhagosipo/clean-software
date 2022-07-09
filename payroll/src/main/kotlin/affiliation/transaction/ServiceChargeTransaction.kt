@@ -1,7 +1,7 @@
-package transaction
+package affiliation.transaction
 
 import PayrollDatabase
-import ServiceCharge
+import affiliation.ServiceCharge
 import Transaction
 import affiliation.UnionAffiliation
 import employee.Employee

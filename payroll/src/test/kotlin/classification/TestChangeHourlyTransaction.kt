@@ -32,7 +32,7 @@ class TestChangeHourlyTransaction {
         assertNotNull(e)
         val hc = e?.pc as? HourlyClassification
         assertNotNull(hc)
-        assertEquals(hc?.getRate(), rate)
+        assertEquals(hc?.rate, rate)
         val ws = e?.ps as? WeeklySchedule
         assertNotNull(ws)
     }

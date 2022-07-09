@@ -42,8 +42,8 @@ class TestAddCommissionedEmployee {
 
     private fun assertClassification(c: CommissionedClassification?, salary: Double, commissionRate: Double) {
         assertNotNull(c)
-        assertEquals(c?.getSalary(), salary)
-        assertEquals(c?.getCommissionRate(), commissionRate)
+        assertEquals(c?.salary, salary)
+        assertEquals(c?.commissionRate, commissionRate)
     }
 
     private fun assertSchedule(s: BiWeeklySchedule?) {

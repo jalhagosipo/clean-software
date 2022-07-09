@@ -37,7 +37,7 @@ class TestAddSalariedEmployee {
 
     private fun assertClassification(c: SalariedClassification?, salary: Double) {
         assertNotNull(c)
-        assertEquals(c?.getSalary(), salary)
+        assertEquals(c?.salary, salary)
     }
 
     private fun assertSchedule(s: MonthlySchedule?) {

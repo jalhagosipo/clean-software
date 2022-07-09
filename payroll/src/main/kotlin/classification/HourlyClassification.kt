@@ -4,14 +4,10 @@ import Paycheck
 import java.util.Date
 
 class HourlyClassification(
-        private val rate: Double
+        val rate: Double
 ) : PaymentClassification {
 
     private val timeCards: MutableList<TimeCard> = ArrayList()
-
-    fun getRate(): Double {
-        return rate
-    }
 
     fun getTimeCard(date: Date): TimeCard? {
         return timeCards.stream()

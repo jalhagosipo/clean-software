@@ -39,7 +39,7 @@ class TestAddHourlyEmployee {
 
     private fun assertClassification(c: HourlyClassification?, hourlyWage: Double) {
         assertNotNull(c)
-        assertEquals(c?.getRate(), hourlyWage)
+        assertEquals(c?.rate, hourlyWage)
     }
 
     private fun assertSchedule(s: WeeklySchedule?) {

@@ -32,7 +32,7 @@ class TestChangeSalariedTransaction {
         assertNotNull(e)
         val sc = e?.pc as? SalariedClassification
         assertNotNull(sc)
-        assertEquals(sc?.getSalary(), salary)
+        assertEquals(sc?.salary, salary)
         val ms = e?.ps as? MonthlySchedule
         assertNotNull(ms)
     }

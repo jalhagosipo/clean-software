@@ -1,7 +1,7 @@
-package transaction
+package classification.transaction
 
 import PayrollDatabase
-import SalesReceipt
+import classification.SalesReceipt
 import Transaction
 import classification.CommissionedClassification
 import employee.Employee

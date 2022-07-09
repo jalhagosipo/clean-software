@@ -1,8 +1,9 @@
-package transaction
+package classification
 
 import PayrollDatabase
-import SalesReceipt
+import classification.SalesReceipt
 import classification.CommissionedClassification
+import classification.transaction.SalesReceiptTransaction
 import employee.trasaction.AddCommissionedEmployee
 import employee.Employee
 import org.junit.jupiter.api.Assertions.assertEquals

@@ -3,7 +3,7 @@ import employee.trasaction.AddHourlyEmployee
 import employee.trasaction.AddSalariedEmployee
 import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.Test
-import transaction.ServiceChargeTransaction
+import affiliation.transaction.ServiceChargeTransaction
 import classification.transaction.TimeCardTransaction
 import java.util.*
 
