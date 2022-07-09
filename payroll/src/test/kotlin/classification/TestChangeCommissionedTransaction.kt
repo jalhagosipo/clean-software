@@ -1,9 +1,9 @@
 package classification
 
 import PayrollDatabase
-import employee.trasaction.AddCommissionedEmployee
+import classification.transaction.ChangeCommissionedTransaction
 import employee.Employee
-import method.HoldMethod
+import employee.trasaction.AddHourlyEmployee
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Assertions.assertNotNull
 import org.junit.jupiter.api.Test
@@ -14,41 +14,28 @@ class TestChangeCommissionedTransaction {
 
     @Test
     @Throws(Exception::class)
-    fun testAddCommissionedEmployee() {
+    fun testChangeCommissionedTransaction() {
         // given
-        val empId = 3
-        val name = "Robert"
-        val address = "Office Address"
-        val salary = 10000.00
-        val commissionRate = 0.1
-        val t = AddCommissionedEmployee(empId, name, address, salary.toInt(), commissionRate)
-        // when
+        val empId = 4
+        val t = AddHourlyEmployee(empId, "Lance", "Home", 25.32)
         t.execute()
+        val salary = 3500.00
+        val commissionRate = 2.2
+        // when
+        val cct = ChangeCommissionedTransaction(empId, salary, commissionRate)
+        cct.execute()
         // then
         val e: Employee? = PayrollDatabase.getEmployee(empId)
-        assertEmployee(e, name, address)
-        assertClassification(e!!.pc as? CommissionedClassification, salary, commissionRate)
-        assertSchedule(e!!.ps as? BiWeeklySchedule)
-        assertMethod(e!!.pm as? HoldMethod)
+        assertEmployee(e, salary, commissionRate)
     }
 
-    private fun assertEmployee(e: Employee?, name: String, address: String) {
+    private fun assertEmployee(e: Employee?, salary: Double, commissionRate: Double) {
         assertNotNull(e)
-        assertEquals(e?.name, name)
-        assertEquals(e?.address, address)
-    }
-
-    private fun assertClassification(c: CommissionedClassification?, salary: Double, commissionRate: Double) {
-        assertNotNull(c)
-        assertEquals(c?.salary, salary)
-        assertEquals(c?.commissionRate, commissionRate)
-    }
-
-    private fun assertSchedule(s: BiWeeklySchedule?) {
-        assertNotNull(s)
-    }
-
-    private fun assertMethod(m: HoldMethod?) {
-        assertNotNull(m)
+        val cc: CommissionedClassification? = e?.pc as? CommissionedClassification
+        assertNotNull(cc)
+        assertEquals(cc?.salary, salary)
+        assertEquals(cc?.commissionRate, commissionRate)
+        val bws: BiWeeklySchedule? = e?.ps as? BiWeeklySchedule
+        assertNotNull(bws)
     }
 }
