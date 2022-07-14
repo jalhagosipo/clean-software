@@ -1,3 +1,5 @@
+package standardShapeFactory
+
 class ShapeFactoryImplementation: ShapeFactory {
     override fun makeCircle(): Shape {
         return Circle()
