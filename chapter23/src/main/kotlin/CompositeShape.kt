@@ -5,10 +5,7 @@ class CompositeShape : Shape {
     }
 
     override fun draw() {
-        for (i: Int in 0 until itsShape.size) {
-            val shape = itsShape.elementAt(i)
-            shape.draw()
-        }
+        itsShape.forEach { it.draw() }
     }
 
 }
