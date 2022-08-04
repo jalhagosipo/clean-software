@@ -10,4 +10,5 @@ include 'payroll'
 include 'baseball-game'
 include 'chapter23'
 include 'chapter24'
+include 'chapter25'
 
