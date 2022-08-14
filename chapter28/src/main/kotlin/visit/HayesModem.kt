@@ -1,3 +1,5 @@
+package visit
+
 class HayesModem: Modem {
     var configurationString: String? = null
 

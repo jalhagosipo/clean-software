@@ -1,5 +1,7 @@
-class ErnieModem: Modem {
-    var internalPattern: String? = null
+package visit
+
+class ZoomModem: Modem {
+    var configurationValue: Int = 0
 
     override fun dial(pno: String) {
     }

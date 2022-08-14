@@ -1,3 +1,5 @@
+package visit
+
 class UnixModemConfigurator: ModemVisitor {
     override fun visit(modem: HayesModem) {
         modem.configurationString = "&s1=4&D=3"

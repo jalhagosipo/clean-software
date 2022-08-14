@@ -1,6 +1,10 @@
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
+import visit.ErnieModem
+import visit.HayesModem
+import visit.UnixModemConfigurator
+import visit.ZoomModem
 
 class TestModemVisitor {
     private lateinit var v: UnixModemConfigurator
