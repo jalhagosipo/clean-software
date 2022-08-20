@@ -1,3 +1,5 @@
+package swtich_case
+
 class Turnstile(private val turnstileController: TurnstileController) {
     var state = LOCKED
 

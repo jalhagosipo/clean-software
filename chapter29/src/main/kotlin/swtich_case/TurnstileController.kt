@@ -1,3 +1,5 @@
+package swtich_case
+
 interface TurnstileController {
     fun lock()
     fun unlock()

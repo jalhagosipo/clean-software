@@ -1,6 +1,8 @@
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
+import swtich_case.Turnstile
+import swtich_case.TurnstileController
 
 class TestTurnstile {
     private lateinit var t: Turnstile
