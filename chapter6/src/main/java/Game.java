@@ -1,39 +1,38 @@
 public class Game {
     public int score() {
-        return scoreForFrame(getCurrentFrame() - 1);
+        return scoreForFrame(itsCurrentFrame);
     }
 
     public void add(int pins) {
         itsScorer.addThrow(pins);
-        itsScore += pins;
         adjustCurrentFrame(pins);
     }
 
     private void adjustCurrentFrame(int pins) {
-        if (firstThrowInFrame == true) {
-            if (pins == 10) {
-                itsCurrentFrame++;
-            } else {
-                firstThrowInFrame = false;
-            }
+        if (lastBallInFrame(pins)) {
+            advanceFrame();
         } else {
-            firstThrowInFrame = true;
-            itsCurrentFrame++;
+            firstThrowInFrame = false;
         }
-        itsCurrentFrame = Math.min(11, itsCurrentFrame);
+    }
+
+    private boolean lastBallInFrame(int pins) {
+        return strike(pins) || (!firstThrowInFrame);
+    }
+
+    private boolean strike(int pins) {
+        return firstThrowInFrame && pins == 10;
+    }
+
+    private void advanceFrame() {
+        itsCurrentFrame = Math.min(10, itsCurrentFrame + 1);
     }
 
     public int scoreForFrame(int theFrame) {
         return itsScorer.scoreForFrame(theFrame);
     }
 
-    public int getCurrentFrame() {
-        return itsCurrentFrame;
-    }
-
-
     private int itsCurrentFrame = 1;
     private boolean firstThrowInFrame = true;
-    private int itsScore = 0;
     private Scorer itsScorer = new Scorer();
 }

@@ -15,7 +15,7 @@ public class Scorer {
                 ball+=2;
             } else {
                 score += twoBallsInFrame();
-                ball++;
+                ball+=2;
             }
         }
         return score;
